@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import SingleGradient from '../../components/SingleGradient/SingleGradient';
+import './GradientList.css';
 class GradientList extends Component{
   
   state = {
@@ -16,16 +17,18 @@ class GradientList extends Component{
         colors = gradient.colors.map(singleColor=>{
           return singleColor + ' ';
         });
-        return <SingleGradient 
-        key={gradient.key}
+        return <div className="col"key={gradient.key}><SingleGradient 
+        
         colors={colors}
-        />;
+        name={gradient.name}
+        /></div>;
       });
     }
     return (
-      <div>
-        <h1>GradientList</h1>
+      <div className="container">
+        <div className="grid">
         {showGradients}
+        </div>
       </div>
     );
   }

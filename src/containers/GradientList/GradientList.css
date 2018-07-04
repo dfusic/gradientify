@@ -1,0 +1,19 @@
+.container{
+  max-width: 800px;
+  margin: 0 auto;
+}
+.grid{
+  display: flex;
+}
+.col{
+  margin: 0 15px;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+@media screen and (max-width: 767px){
+  .grid{
+    display: block;
+  }
+}

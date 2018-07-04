@@ -1,0 +1,48 @@
+.SingleGradient{
+  background-color: white;
+  padding: 25px;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 5px 10px -2px rgba(110,110,110,.5);
+  -moz-box-shadow: 0px 5px 10px -2px rgba(110,110,110,.5);
+  box-shadow: 0px 5px 10px -2px rgba(110,110,110,.5);
+  transition: box-shadow 200ms ease-in-out;
+  margin: 15px 0;
+}
+.SingleGradient:hover{
+  -webkit-box-shadow: 0px 10px 10px -2px rgba(110,110,110,.5);
+  -moz-box-shadow: 0px 10px 10px -2px rgba(110,110,110,.5);
+  box-shadow: 0px 10px 10px -2px rgba(110,110,110,.5);
+}
+.SingleGradient_name{
+  text-align: center;
+  color: #242424;
+}
+.SingleGradient_data{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.SingleGradient_copy_css{
+  font-family: 'Karla', sans-serif;
+  background-color: white;
+  padding: 5px;
+  border: none;
+  cursor: pointer;
+  color: #242424;
+}
+.SingleGradient_copy_css:hover, .SingleGradient_copy_css:focus{
+  opacity: .8;
+  outline: none;
+}
+.SingleGradient_direction{
+  border: none;
+  padding: 5px;
+  background-color: white;
+  font-family: 'Karla', sans-serif;
+  cursor: pointer;
+}
+.SingleGradient_direction:hover, .SingleGradient_direction:focus{
+  opacity: .8;
+  outline: none;
+}
