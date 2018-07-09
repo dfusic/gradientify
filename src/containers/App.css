@@ -1,0 +1,29 @@
+.grid{
+  display: flex;
+  flex-wrap: wrap;
+}
+.container{
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 992px){
+  .container{
+    max-width: 960px;
+  }
+}
+@media screen and (max-width: 768px){
+  .container{
+    max-width: 720px;
+  }
+}
+@media screen and (max-width: 576px){
+  .container{
+    max-width: auto;
+  }
+}
+@media screen and (max-width: 1200px){
+  .container{
+    max-width: 1140px;
+  }
+}

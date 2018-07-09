@@ -1,19 +1,15 @@
-.container{
-  max-width: 800px;
-  margin: 0 auto;
-}
-.grid{
-  display: flex;
-}
 .col{
   margin: 0 15px;
-  flex: 1;
-  display: flex;
-  justify-content: center;
+  width: calc(33% - 30px);
+  float: left;
 }
-
-@media screen and (max-width: 767px){
-  .grid{
-    display: block;
+@media screen and (max-width: 768px){
+  .col{
+    width: calc(50% - 30px);
+  }
+}
+@media screen and (max-width: 550px){
+  .col{
+    width: 100%;
   }
 }

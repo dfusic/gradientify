@@ -17,11 +17,13 @@ class GradientList extends Component{
         colors = gradient.colors.map(singleColor=>{
           return singleColor + ' ';
         });
-        return <div className="col"key={gradient.key}><SingleGradient 
-        
-        colors={colors}
-        name={gradient.name}
-        /></div>;
+        return (
+          <SingleGradient 
+            colors={colors}
+            name={gradient.name}
+            key={gradient.key}
+            />
+        );
       });
     }
     return (

@@ -46,3 +46,9 @@
   opacity: .8;
   outline: none;
 }
+@media screen and (max-width: 992px){
+  .SingleGradient_preview{
+    width: 100%;
+    height: auto;
+  }
+}

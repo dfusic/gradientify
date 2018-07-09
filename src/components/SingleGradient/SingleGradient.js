@@ -21,7 +21,8 @@ class SingleGradient extends Component {
       width: '200px',
       height: '200px',
       background: `-webkit-linear-gradient(${this.state.gradientDirection}, ${this.state.colors})`,
-      borderRadius: '50%'
+      borderRadius: '50%',
+      margin: '15px auto'
     }
     let CSS = `
     background: -linear-gradient(${this.state.gradientDirection}, ${this.state.colors});
@@ -39,6 +40,7 @@ class SingleGradient extends Component {
       }, 1500)
     }
   return (
+    <div className="col">
     <article className="SingleGradient">
       <div className="SingleGradient_preview" style={previewStyle}></div>
       <h2 className="SingleGradient_name">{this.props.name}</h2>
@@ -56,6 +58,7 @@ class SingleGradient extends Component {
       </section>
       {alert}
     </article>
+    </div>
   );
  }
 }
