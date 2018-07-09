@@ -3,7 +3,8 @@ import HomeHeader from '../components/HomeHeader/HomeHeader';
 import GradientList from '../containers/GradientList/GradientList';
 import GradientPreview from '../containers/GradientPreview/GradientPreview';
 import api from '../api/db';
-import {Switch, Route, BrowserRouter} from 'react-router-dom';
+import {Route, BrowserRouter} from 'react-router-dom';
+import {AnimatedSwitch} from 'react-router-transition';
 import '../assets/fonts.css';
 import './App.css';
 
@@ -33,17 +34,25 @@ class App extends Component {
   render() {
     let routeList = this.state.gradients.map((grad)=>{
       return (
-      <Route
-      key={grad.key} 
-      path={"/" + grad.name}
-      exact
-      render={()=>
-        {return(<GradientPreview/>)}}/>)
+        <Route 
+        path={"/" + grad.name}
+        key={grad.key}
+        render={()=>{
+          return <GradientPreview 
+          gradient={grad}
+          />
+        }}
+        />
+      );
     })
     return (
       <BrowserRouter>
-          <Switch>
-          {routeList}
+          <AnimatedSwitch
+          atEnter={{ opacity: 0 }}
+          atLeave={{ opacity: 1 }}
+          atActive={{ opacity: 1 }}
+          className="switch-wrapper">
+         
           <Route 
           path="/"
           exact
@@ -62,8 +71,8 @@ class App extends Component {
             );
           }}
           />
-          </Switch>
-        
+          {routeList}
+          </AnimatedSwitch>
       </BrowserRouter>
     );
   }

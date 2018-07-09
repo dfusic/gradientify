@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {CopyToClipboard} from 'react-copy-to-clipboard';
+import {Link} from 'react-router-dom';
 import Alert from '../Alert/Alert';
 import './SingleGradient.css';
 class SingleGradient extends Component {
@@ -42,7 +43,9 @@ class SingleGradient extends Component {
   return (
     <div className="col">
     <article className="SingleGradient">
-      <div className="SingleGradient_preview" style={previewStyle}></div>
+      <Link to={"/" + this.props.name}> 
+        <div className="SingleGradient_preview" style={previewStyle}></div>
+      </Link>
       <h2 className="SingleGradient_name">{this.props.name}</h2>
       <section className="SingleGradient_data">
         <CopyToClipboard text={CSS}

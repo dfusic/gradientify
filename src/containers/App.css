@@ -6,7 +6,10 @@
   max-width: 960px;
   margin: 0 auto;
 }
-
+.switch-wrapper > div{
+  width: 100vw!important;
+  height: 100vh!important;
+}
 @media screen and (max-width: 992px){
   .container{
     max-width: 960px;
