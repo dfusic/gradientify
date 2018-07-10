@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import Alert from '../../components/Alert/Alert';
-import ColorDisplay from '../../components/ColorDisplay/ColorDisplay';
+import ColorDisplay from '../ColorDisplay/ColorDisplay';
 import { Link } from 'react-router-dom';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 import './GradientPreview.css';
@@ -17,6 +17,11 @@ class GradientPreview extends Component{
       direction: event.target.value
     });
   }
+  handleCopy = () => {
+    this.setState({
+      copied: true
+    });
+  }
   render(){
     let GradientPreview_styles = {
       'background': `-webkit-linear-gradient(${this.state.direction}, ${this.props.gradient.colors})`,
@@ -31,7 +36,7 @@ class GradientPreview extends Component{
 
     let alert = null;
     if(this.state.copied){
-      alert = <Alert text="Copies CSS to clipboard!"/>
+      alert = <Alert />
       setTimeout(()=>{
         this.setState({
           copied: false
@@ -46,6 +51,7 @@ class GradientPreview extends Component{
             key={index}
             color={color}
             copied={this.state.copied}
+            handleCopy={this.handleCopy}
             />
         );
       })

@@ -1,5 +1,5 @@
 import React from 'react';
-
+import './HomeHeader.css';
 const HomeHeader = () => {
   return (
     <div className="HomeHeader">

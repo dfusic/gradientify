@@ -42,38 +42,84 @@ export default
         "#536976",
         "#292E49"
       ]
-    },
-    {
-      "name": "Royalty",
+    },{
+      "name": "Faded",
       "key": 6,
-      "colors": [
-        "#536976",
-        "#292E49"
+      "colors":[
+        "#a18cd1",
+        "#fbc2eb"
       ]
     },
     {
-      "name": "Royalty",
+      "name": "Sunny",
       "key": 7,
       "colors": [
-        "#536976",
-        "#292E49"
+        "#f6d365",
+        "#fda085"
       ]
     },
     {
-      "name": "Royalty",
+      "name": "Azure",
       "key": 8,
-      "colors": [
-        "#536976",
-        "#292E49"
+      "colors":[
+        "#84fab0",
+        "#8fd3f4"
       ]
     },
     {
-      "name": "Royalty",
+      "name": "Plum",
       "key": 9,
-      "colors": [
-        "#536976",
-        "#292E49"
+      "colors":[
+        "#acb6e5", 
+        "#86fde8"
       ]
     },
+    {"name": "Strong",
+    "key": 10,
+    "colors": [
+      "#1F1C2C",
+      "#928DAB"
+      ] 
+    },
+    {
+      "name": "Lavender",
+      "key": 11,
+      "colors": [
+        "lavender",
+        "#eee"
+      ]
+    },
+    {
+      "name": "Sea",
+      "key": 12,
+      "colors": [
+        "#2193b0",
+        "#6dd5ed"
+      ]
+    },
+    {
+      "name": "Brownies",
+      "key": 13,
+      "colors": [
+        "#603813",
+        "#b29f94"
+      ]
+    },
+    {
+      "name":"Emerald",
+      "key": 14,
+      "colors":[
+        "#348F50",
+        "#348F83"
+      ]
+    },
+    {
+      "name": "Sprite",
+      "key": 15,
+      "colors": [
+        "#3CA55C",
+        "#B5AC49"
+      ]
+    }
   ]
 }

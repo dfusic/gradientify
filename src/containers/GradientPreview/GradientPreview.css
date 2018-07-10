@@ -69,3 +69,25 @@
   left: 50%;
   transform: translatex(-50%);
 }
+
+@media screen and (max-width: 992px){
+  .ColorCopy{
+    flex-direction: column;
+    left: 25px;
+    top: 100px;
+    transform: none;
+  }
+  .ColorDisplay{
+    margin: 10px 0;
+  }
+}
+
+@media screen and (max-width: 500px){
+  .SingleGradient_direction{
+    display: none;
+  }
+  .SingleGradient_copy_css{
+    text-align: center;
+    width: 100%;
+  }
+}

@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {CopyToClipboard} from 'react-copy-to-clipboard';
 import {Link} from 'react-router-dom';
-import Alert from '../Alert/Alert';
+import Alert from '../../components/Alert/Alert';
 import './SingleGradient.css';
 class SingleGradient extends Component {
   state={
@@ -33,7 +33,7 @@ class SingleGradient extends Component {
     `;
     let alert = null;
     if(this.state.copied){
-      alert = <Alert />;
+      alert = <Alert text="CSS copied to clipboard!"/>;
       setTimeout(()=>{
         this.setState({
           copied: false

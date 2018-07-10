@@ -9,6 +9,9 @@
 .switch-wrapper{
   position: relative;
 }
+.App{
+  padding: 50px 0;
+}
 .switch-wrapper > div{
   overflow-x: hidden;
   width: 100vw!important;

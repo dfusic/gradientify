@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import SingleGradient from '../../components/SingleGradient/SingleGradient';
+import SingleGradient from '../SingleGradient/SingleGradient';
 import './GradientList.css';
 class GradientList extends Component{
   

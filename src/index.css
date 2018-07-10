@@ -1,10 +1,19 @@
+@import url('https://fonts.googleapis.com/css?family=Karla:400,700,900');
 body {
-  font-family: sans-serif;
+  font-family: 'Karla', sans-serif;
   text-align: center;
+}
+::selection{
+  background-color: #C6FFDD;
+}
+::-moz-selection{
+  background-color: #C6FFDD;
 }
 html, body{
   margin: 0;
   padding: 0;
   background-color: #eee;
 }
-
+*{
+  user-select: none;
+}
