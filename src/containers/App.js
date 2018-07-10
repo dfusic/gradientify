@@ -10,10 +10,12 @@ import './App.css';
 
 class App extends Component {
   state={
-    gradients: []
+    gradients: [],
+    hasMore : true
   }
 
   fetchGradients = () => {
+    
     //temporary gradient holder
     let gradients = [];
     //loop through api return
@@ -25,6 +27,13 @@ class App extends Component {
     this.setState({
       gradients: gradients
     })
+    
+  }
+  fetchMoreData = () => {
+    if(this.state.gradients.length >= 8){
+      this.setState({hasMore: false});
+      return;
+    }
   }
 
   componentWillMount(){
@@ -32,6 +41,7 @@ class App extends Component {
   }
  
   render() {
+
     let routeList = this.state.gradients.map((grad)=>{
       return (
         <Route 
@@ -52,7 +62,6 @@ class App extends Component {
           atLeave={{ opacity: 1 }}
           atActive={{ opacity: 1 }}
           className="switch-wrapper">
-         
           <Route 
           path="/"
           exact
@@ -62,11 +71,11 @@ class App extends Component {
               {/*Header - title*/}
               <HomeHeader />
               {/*Gradient list*/}
-              <div className="grid">
-                <GradientList 
-                gradients={this.state.gradients}
-                />
-              </div>
+                <div className="grid">
+                  <GradientList 
+                  gradients={this.state.gradients}
+                  />
+                </div>
             </div>
             );
           }}

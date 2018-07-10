@@ -42,6 +42,38 @@ export default
         "#536976",
         "#292E49"
       ]
-    }
+    },
+    {
+      "name": "Royalty",
+      "key": 6,
+      "colors": [
+        "#536976",
+        "#292E49"
+      ]
+    },
+    {
+      "name": "Royalty",
+      "key": 7,
+      "colors": [
+        "#536976",
+        "#292E49"
+      ]
+    },
+    {
+      "name": "Royalty",
+      "key": 8,
+      "colors": [
+        "#536976",
+        "#292E49"
+      ]
+    },
+    {
+      "name": "Royalty",
+      "key": 9,
+      "colors": [
+        "#536976",
+        "#292E49"
+      ]
+    },
   ]
 }

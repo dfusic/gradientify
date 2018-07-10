@@ -1,10 +1,10 @@
 body {
-  margin: 0;
-  padding: 0;
   font-family: sans-serif;
   text-align: center;
 }
 html, body{
+  margin: 0;
+  padding: 0;
   background-color: #eee;
-  overflow: hidden!important;
 }
+

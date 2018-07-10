@@ -6,7 +6,11 @@
   max-width: 960px;
   margin: 0 auto;
 }
+.switch-wrapper{
+  position: relative;
+}
 .switch-wrapper > div{
+  overflow-x: hidden;
   width: 100vw!important;
   height: 100vh!important;
 }

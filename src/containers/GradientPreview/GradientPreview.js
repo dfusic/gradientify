@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import Alert from '../../components/Alert/Alert';
+import ColorDisplay from '../../components/ColorDisplay/ColorDisplay';
 import { Link } from 'react-router-dom';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 import './GradientPreview.css';
@@ -30,12 +31,24 @@ class GradientPreview extends Component{
 
     let alert = null;
     if(this.state.copied){
-      alert = <Alert />
+      alert = <Alert text="Copies CSS to clipboard!"/>
       setTimeout(()=>{
         this.setState({
           copied: false
         })
       }, 1500)
+    }
+    let colorCopy = null;
+    if(this.state.colors.length > 0){
+      colorCopy = this.state.colors.map((color,index)=>{
+        return (
+            <ColorDisplay 
+            key={index}
+            color={color}
+            copied={this.state.copied}
+            />
+        );
+      })
     }
     return(
       <div className="GradientPreview" style={GradientPreview_styles}>
@@ -52,6 +65,9 @@ class GradientPreview extends Component{
         <option value="right">Right</option>
         <option value="bottom">Bottom</option>
       </select>
+      <div className="ColorCopy">
+        {colorCopy}
+      </div>
       {alert}
       </div>
     );
